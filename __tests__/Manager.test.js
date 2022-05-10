@@ -1,41 +1,36 @@
-const Engineer = require("../lib/Engineer");
+const Manager = require("../lib/Manager");
 
-describe("Engineer", () => {
+describe("Manager", () => {
   describe("Initialization", () => {
-    it("should set github via constrcutor arguments", () => {
+    it("should set office Number via constrcutor arguments", () => {
       // arrange
-      const github = "treyeckels";
+      const officeNumber = 100;
       // act
-      const engineer = new Engineer("Alice", 1, "test@test.com", github);
+      const manager = new Manager("Alice", 1, "test@test.com", officeNumber);
       // assert
-      expect(engineer.github).toBe(github);
+      expect(manager.officeNumber).toBe(officeNumber);
     });
   });
 
   describe("Getter methods", () => {
-    it("should get github via getGithub()", () => {
+    it("should get office number via getOffice()", () => {
       // arrange
-      const github = "treyeckels";
+      const officeNumber = 100;
       // act
-      const engineer = new Engineer("Alice", 1, "test@test.com", github);
-      const engineerGithub = engineer.getGithub();
+      const manager = new Manager("Alice", 1, "test@test.com", officeNumber);
+      const managerOfficeNumber = manager.getOffice();
       // assert
-      expect(engineerGithub).toBe(github);
+      expect(managerOfficeNumber).toBe(officeNumber);
     });
 
     it("should get role via getRole()", () => {
       // arrange
-      const role = "Engineer";
+      const role = "Manager";
       // act
-      const engineer = new Engineer(
-        "Alice",
-        100,
-        "test@test.com",
-        "treyeckels"
-      );
-      const engineerRole = engineer.getRole();
+      const manager = new Manager("Alice", 100, "test@test.com", 100);
+      const managerRole = manager.getRole();
       // assert
-      expect(engineerRole).toBe(role);
+      expect(managerRole).toBe(role);
     });
   });
 });
