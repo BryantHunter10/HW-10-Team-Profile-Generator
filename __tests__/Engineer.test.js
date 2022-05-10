@@ -4,7 +4,7 @@ describe("Engineer", () => {
   describe("Initialization", () => {
     it("should set github via constrcutor arguments", () => {
       // arrange
-      const github = "treyeckels";
+      const github = "BryantHunter10";
       // act
       const engineer = new Engineer("Alice", 1, "test@test.com", github);
       // assert
@@ -15,7 +15,7 @@ describe("Engineer", () => {
   describe("Getter methods", () => {
     it("should get github via getGithub()", () => {
       // arrange
-      const github = "treyeckels";
+      const github = "BryantHunter10";
       // act
       const engineer = new Engineer("Alice", 1, "test@test.com", github);
       const engineerGithub = engineer.getGithub();
@@ -31,7 +31,7 @@ describe("Engineer", () => {
         "Alice",
         100,
         "test@test.com",
-        "treyeckels"
+        "BryantHunter10"
       );
       const engineerRole = engineer.getRole();
       // assert
